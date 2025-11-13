@@ -98,6 +98,8 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 var vite_config_default = defineConfig({
+  // vite.config.ts (基于 image_e0898e.png 的修改)
+  base: "./",
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -119,7 +121,7 @@ var vite_config_default = defineConfig({
   },
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: "dist",
     emptyOutDir: true
   },
   server: {
